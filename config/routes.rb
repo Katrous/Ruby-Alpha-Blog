@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   # creates a route for root route, sends to pages controller which returns a view file
   get 'about', to: 'pages#about'
   # creates a route for the /about url, request is sent to pages controlelr which returns a view file for about
-  resources :articles, only: [:show, :index]
+  resources :articles
   # creates routes that work with resources
 end
