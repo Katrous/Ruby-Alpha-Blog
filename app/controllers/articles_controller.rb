@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
         # render plain: params[:article]
         # renders to browser screen
         @article = Article.new(article_params)
+        @article.user = User.first
         # A secrutiy function in rails requires you to state what fields specifically it uses. more on this in lecture 88
         if @article.save
         # saves newly made article from the content we got above to the database.
